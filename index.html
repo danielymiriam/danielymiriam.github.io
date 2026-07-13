@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Boda Daniel y Míriam · 7 de Noviembre de 2026" />
+  <title>Boda Daniel &amp; Míriam</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="res/css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="inicio">
+
+    <!-- Carousel (populated by JS) -->
+    <div class="carousel" id="carousel" aria-label="Galería de fotos" role="region"></div>
+
+    <!-- Diagonal monogram watermark -->
+    <div class="monogram-overlay" aria-hidden="true">
+      <span class="monogram-text">D&amp;M</span>
+    </div>
+
+    <!-- Hero text -->
+    <div class="hero-content">
+      <p class="hero-date-label">Sábado · 7 de Noviembre de 2026</p>
+      <h1 class="hero-title">
+        Boda <span class="hero-name">Daniel</span>
+        <span class="hero-amp">&amp;</span>
+        <span class="hero-name">Míriam</span>
+      </h1>
+      <div class="hero-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-ornament">◇</span>
+        <span class="divider-line"></span>
+      </div>
+    </div>
+
+    <!-- Carousel controls -->
+    <button class="carousel-btn carousel-btn--prev" id="prevBtn" aria-label="Foto anterior">&#8249;</button>
+    <button class="carousel-btn carousel-btn--next" id="nextBtn" aria-label="Foto siguiente">&#8250;</button>
+    <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Seleccionar foto"></div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+
+  </section>
+
+
+  <!-- =================== WELCOME =================== -->
+  <section class="welcome" id="bienvenida">
+    <div class="container">
+      <div class="ornament-line" aria-hidden="true">
+        <span></span><span class="leaf">✿</span><span></span>
+      </div>
+      <h2 class="section-heading reveal">¡Nos casamos!</h2>
+      <p class="section-subtext reveal">
+        Y nos gustaría compartir este día tan especial contigo.
+      </p>
+      <div class="ornament-line" aria-hidden="true">
+        <span></span><span class="leaf">✿</span><span></span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =================== DATE =================== -->
+  <section class="date-section">
+    <div class="container">
+      <div class="date-card reveal">
+        <div class="date-inner">
+          <span class="date-weekday">Sábado</span>
+          <span class="date-num">07</span>
+          <span class="date-vsep"></span>
+          <div class="date-month-year">
+            <span>Noviembre</span>
+            <span>2026</span>
+          </div>
+        </div>
+        <div class="date-time-tag">13:00 h · Hora española</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =================== COUNTDOWN =================== -->
+  <section class="countdown-section" id="cuenta-atras">
+    <div class="countdown-bg-overlay"></div>
+    <div class="container">
+      <h3 class="section-heading section-heading--light reveal">Cuenta atrás</h3>
+      <div class="countdown reveal">
+        <div class="cd-item">
+          <div class="cd-box"><span class="cd-num" id="cd-days">000</span></div>
+          <span class="cd-lbl">días</span>
+        </div>
+        <span class="cd-colon" aria-hidden="true">:</span>
+        <div class="cd-item">
+          <div class="cd-box"><span class="cd-num" id="cd-hours">00</span></div>
+          <span class="cd-lbl">horas</span>
+        </div>
+        <span class="cd-colon" aria-hidden="true">:</span>
+        <div class="cd-item">
+          <div class="cd-box"><span class="cd-num" id="cd-minutes">00</span></div>
+          <span class="cd-lbl">minutos</span>
+        </div>
+        <span class="cd-colon" aria-hidden="true">:</span>
+        <div class="cd-item">
+          <div class="cd-box"><span class="cd-num" id="cd-seconds">00</span></div>
+          <span class="cd-lbl">segundos</span>
+        </div>
+      </div>
+      <p class="cd-caption reveal">¡Para el día más bonito de nuestras vidas!</p>
+    </div>
+  </section>
+
+
+  <!-- =================== CTA =================== -->
+  <section class="cta-section" id="asistencia">
+    <div class="container">
+      <div class="cta-card reveal">
+        <span class="cta-icon" aria-hidden="true">💌</span>
+        <h3 class="cta-heading">¿Nos acompañas?</h3>
+        <p class="cta-body">
+          Tu presencia hará este día aún más especial.<br />
+          Por favor, confírmanos tu asistencia antes del
+          <strong>1 de octubre de 2026</strong>.
+        </p>
+        <a
+          href="https://forms.gle/TU_ENLACE_AQUI"
+          class="cta-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Confirmar asistencia
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer">
+    <p class="footer-mono">D <span class="footer-amp">&amp;</span> M</p>
+    <p class="footer-date">07 · 11 · 2026</p>
+    <p class="footer-heart">♡</p>
+  </footer>
+
+  <script src="res/js/main.js"></script>
+</body>
+</html>
