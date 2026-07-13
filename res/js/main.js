@@ -6,7 +6,7 @@
    CAROUSEL
 ══════════════════════ */
 (function initCarousel() {
-  const TOTAL       = 17;
+  const TOTAL       = 13;
   const BASE_URL    = 'https://raw.githubusercontent.com/danielymiriam/danielymiriam.github.io/refs/heads/main/res/img/';
   const INTERVAL_MS = 5000;   // ms between auto-advances
   const FADE_MS     = 1600;   // must match CSS transition duration
