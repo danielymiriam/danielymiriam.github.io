@@ -384,15 +384,9 @@ button { cursor:pointer; border:none; background:none; }
 }
 .date-month-year span:first-child {
   font-family: var(--ff-serif);
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-size: 2rem;
   color: var(--brown);
   letter-spacing: .05em;
-}
-.date-month-year span:last-child {
-  font-family: var(--ff-body);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: var(--text-muted);
-  letter-spacing: .1em;
 }
 
 .date-time-tag {
