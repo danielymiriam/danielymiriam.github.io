@@ -148,6 +148,39 @@
   </section>
 
 
+  <!-- =================== ÁLBUM DE FOTOS =================== -->
+  <section class="album-section" id="album">
+    <div class="container">
+      <div class="album-card reveal">
+        <span class="album-icon" aria-hidden="true">📸</span>
+        <h3 class="album-heading">Álbum de fotos</h3>
+        <p class="album-body">
+          ¡Queremos revivir cada momento con vosotros!<br />
+          Días después del evento publicaremos aquí un enlace para que todo el mundo pueda subir y compartir las fotos que quiera.
+        </p>
+        <div class="album-action">
+          <!-- Para activar el enlace tras el evento:
+               1. Sustituir '#' por el enlace del álbum (Google Photos, Drive, etc.).
+               2. Retirar la clase 'album-btn--disabled', el onclick y el atributo aria-disabled.
+               3. Retirar o modificar la etiqueta 'Próximamente'. -->
+          <a
+            href="#"
+            class="album-btn album-btn--disabled"
+            role="button"
+            aria-disabled="true"
+            tabindex="-1"
+            onclick="return false;"
+            title="El enlace estará disponible unos días después de la boda"
+          >
+            <span>Subir fotos</span>
+            <span class="album-badge">Próximamente</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- =================== FOOTER =================== -->
   <footer class="footer">
     <p class="footer-mono">D <span class="footer-amp">&amp;</span> M</p>
