@@ -156,29 +156,89 @@
         <h3 class="album-heading">Álbum de fotos</h3>
         <p class="album-body">
           ¡Queremos revivir cada momento con vosotros!<br />
-          Días después del evento publicaremos aquí un enlace para que todo el mundo pueda subir y compartir las fotos que quiera.
+          Ya podéis ver las fotos de la boda y subir todos vuestros recuerdos compartidos.
         </p>
         <div class="album-action">
-          <!-- Para activar el enlace tras el evento:
-               1. Sustituir '#' por el enlace del álbum (Google Photos, Drive, etc.).
-               2. Retirar la clase 'album-btn--disabled', el onclick y el atributo aria-disabled.
-               3. Retirar o modificar la etiqueta 'Próximamente'. -->
-          <a
-            href="#"
-            class="album-btn album-btn--disabled"
-            role="button"
-            aria-disabled="true"
-            tabindex="-1"
-            onclick="return false;"
-            title="El enlace estará disponible unos días después de la boda"
+          <button
+            type="button"
+            class="album-btn"
+            id="openAlbumModal"
+            aria-haspopup="dialog"
+            aria-controls="albumModal"
           >
-            <span>Subir fotos</span>
-            <span class="album-badge">Próximamente</span>
-          </a>
+            Ver y subir fotos
+          </button>
         </div>
       </div>
     </div>
   </section>
+
+
+  <!-- =================== MODAL ÁLBUM DE FOTOS =================== -->
+  <div class="modal-overlay" id="albumModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="closeAlbumModal" type="button" aria-label="Cerrar ventana">&times;</button>
+      
+      <div class="modal-header">
+        <span class="modal-icon" aria-hidden="true">📸</span>
+        <h3 class="modal-title" id="modalTitle">Álbum de la boda</h3>
+        <p class="modal-subtitle">¡Comparte tus fotos y revive los mejores momentos!</p>
+      </div>
+
+      <div class="modal-body">
+        <!-- Botón principal grande -->
+        <a
+          href="https://photos.app.goo.gl/QfofcU8wEFG5cY4y7"
+          class="modal-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Ver y publicar fotos</span>
+          <svg class="modal-btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+
+        <!-- Instrucciones para familiares poco técnicos -->
+        <div class="modal-instructions">
+          <h4 class="instructions-heading">¿Cómo unirse y subir fotos?</h4>
+          
+          <ol class="steps-list">
+            <li class="step-item">
+              <span class="step-num">1</span>
+              <div class="step-content">
+                <strong>Abre el álbum</strong>
+                <p>Pulsa en el botón superior <em>«Ver y publicar fotos»</em>. En tu móvil se abrirá la aplicación de <strong>Google Fotos</strong> (o la página web en tu ordenador).</p>
+              </div>
+            </li>
+            
+            <li class="step-item">
+              <span class="step-num">2</span>
+              <div class="step-content">
+                <strong>Únete al álbum</strong>
+                <p>Inicia sesión con tu cuenta de Google (Gmail) si te lo solicita y toca el botón <strong>«Unirse»</strong> que verás en la parte superior.</p>
+              </div>
+            </li>
+            
+            <li class="step-item">
+              <span class="step-num">3</span>
+              <div class="step-content">
+                <strong>Publica tus fotos y vídeos</strong>
+                <p>Toca el icono <strong>«+»</strong> (o <em>«Añadir fotos»</em>), elige las que quieras de tu galería y pulsa en <strong>«Añadir»</strong> o <strong>«Listo»</strong>.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="modal-tip">
+            <span class="tip-icon" aria-hidden="true">💡</span>
+            <p><strong>Nota:</strong> Puedes ver todas las fotos sin iniciar sesión, pero para añadir las tuyas necesitarás unirte con tu cuenta de Google.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- =================== FOOTER =================== -->

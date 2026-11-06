@@ -182,3 +182,45 @@
 
   items.forEach(el => observer.observe(el));
 })();
+
+/* ══════════════════════
+   ALBUM MODAL
+══════════════════════ */
+(function initAlbumModal() {
+  const openBtn = document.getElementById('openAlbumModal');
+  const modal = document.getElementById('albumModal');
+  const closeBtn = document.getElementById('closeAlbumModal');
+
+  if (!openBtn || !modal) return;
+
+  function openModal() {
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    openBtn.focus();
+  }
+
+  openBtn.addEventListener('click', openModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+  // Cerrar al hacer clic fuera de la tarjeta
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Cerrar con la tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+})();
